@@ -1,0 +1,38 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+
+
+from ..rdefs import *
+
+deduc Thm with d_k {
+    
+    intr I {
+        en = "
+        Let $@alp, alp1, ddd, alpr$ be integers of $k$.
+        Let $@frp$ be a prime ideal of $k$.
+        "
+    }
+
+    supp S {
+        sy = "$@alp not equiv 0 mod frp$"
+    }
+
+    asrt A {
+        en = "
+        A congruence mod $@frp$ of degree $r$ of the form
+            $@alp x^r + alp1 xuur-1 + ccc + alpr equiv 0 mod frp$
+        has at most $r$ incongruent roots mod $@frp$.
+        "
+    }
+
+    meson = "
+    Let I. Suppose S. Then A.
+    "
+}

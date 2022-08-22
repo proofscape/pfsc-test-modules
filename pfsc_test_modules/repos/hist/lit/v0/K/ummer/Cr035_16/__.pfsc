@@ -1,0 +1,28 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+import .Pg356_18 as Pg356_18
+
+work = {
+    "MSC2010": "11R18",
+    "journal": "Crelle",
+    "kind": "article",
+    "libpath": "lit.K.ummer.Cr035_16",
+    "pages": {
+        "first": 327,
+        "last": 367
+    },
+    "source": [
+        "http://www.digizeitschriften.de/dms/img/?PID=GDZPPN002146053"
+    ],
+    "title": "Über die Zerlegung der aus Wurzeln der Einheit gebildeten complexen Zahlen in ihre Primfactoren",
+    "volume": 35,
+    "year": 1847
+}
+

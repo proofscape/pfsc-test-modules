@@ -1,0 +1,47 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+
+
+deduc Thm {
+
+    intr I10 {
+        en = "
+        Let $@ell$ be a regular prime,
+        $@zeta$ a primitive $@ell eth t h ;$ root of unity,
+        and $@sfE$ a unit in $@bbQ(zeta)$.
+        "
+    }
+
+    supp S20 {
+        en = "
+        Suppose $@sfE$ is congruent to
+        a rational integer mod $@ell$.
+        "
+    }
+
+    asrt A30 {
+        en = "
+        $@sfE$ is the $@ell eth$ power of
+        some unit in $@bbQ(zeta)$.
+        "
+    }
+
+    meson = "
+    Let I10. Suppose S20. Then A30.
+    "
+}
+
+deduc Pf of Thm.A30 {
+
+    meson = "
+    !
+    Thm.A30
+    "
+}

@@ -1,0 +1,369 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+from .. import Cr035_16, Cr040_07
+
+work = {
+    "journal": "Crelle",
+    "kind": "article",
+    "libpath": "lit.K.ummer.Cr040_08",
+    "pages": {
+        "first": 130,
+        "last": 146
+    },
+    "source": [
+        "http://www.digizeitschriften.de/dms/img/?PID=GDZPPN002146738"
+    ],
+    "title": "Allgemeiner Beweis des Fermatschen Satzes...",
+    "volume": 40,
+    "year": 1850,
+    "signed_date": [19, 6, 1849]
+}
+
+deduc Thm {
+    
+    intr I {
+        en="
+        Let $@lam > 3$ be a prime number.
+        Let $@alp$ be an imaginary root of
+        the equation $@alpuulam = 1$.
+        Let $@u, v, w in bbQ(alp)$.
+        "
+        
+        note="
+        1. While we have stayed true to Kummer's way of defining $@alp$ (see e.g. Cr035_16),
+        we have modernized the definition of $u, v, w$. Kummer would describe these as
+        \"complex numbers formed from $@lam eth$ roots of unity\".
+        
+        2. Kummer did not state here that $@lam$ should be greater than three.
+        Instead, toward the end of the proof of Case 1, he begins to say,
+        \"with the exception of the one case $@lam = 3$,\" as soon as it becomes
+        necessary to do so. At the end of his proof of Case 1 he refers to this
+        case as one \"which we will not consider here.\"
+        "
+    }
+    
+    supp S {
+        en="
+        Suppose $@lam$ does not divide the numerator
+        of any of the first $@(lam - 3)/2$ Bernoulli
+        numbers.
+        "
+    }
+    
+    asrt C {
+        en="
+        The equation
+            $@uuulam + vuulam + wuulam = 0$
+        is impossible.
+        "
+    }
+    
+    meson="Let I. Suppose S. Then C."
+}
+
+deduc Pf of Thm.C {
+    
+    asrt A10 {
+        en="
+        The class number of $@bbQ(alp)$
+        is not divisible by $@lam$.
+        "
+    }
+    
+    asrt A20 {
+        en="
+        The $@lam eth$ power of a non-principal
+        ideal in $@bbQ(alp)$ is never principal.
+        "
+    }
+    
+    asrt A30 {
+        en="
+        Any unit in $@bbZ[alp]$ that is congruent
+        mod $@lam$ to a rational integer is the
+        $@lam eth$ power of another unit.
+        "
+    }
+    
+    supp S40 {
+        en="
+        Suppose the equation
+            $@uuulam + vuulam + wuulam = 0$
+        did have a solution in complex
+        numbers $u, v, w$.
+        "
+    }
+    
+    supp S50 wolog {
+        en="
+        Assume that $u, v, w$ do not all three
+        have a common factor, and that therefore nor
+        do any two of these have a common factor.
+        "
+    }
+    
+    subdeduc Cs1 {
+        supp S {
+            en="
+            Suppose none of the three complex
+            numbers $u, v, w$ is divisible by $@1 - alp$.
+            "
+        }
+        flse F contra S, S40 {}
+        meson="Suppose S. Then F."
+    }
+    
+    subdeduc Cs2 {
+        supp S versus Cs1.S {
+            en="
+            Suppose exactly one of the three
+            complex numbers $u, v, w$ is divisible
+            by $@1 - alp$.
+            "
+        }
+        flse F contra S, S40 {}
+        meson="Suppose S. Then F."
+    }
+    
+    flse F contra S40 {}
+    
+    meson="
+    From Thm.S and Cr040_07.Pg127_30 get A10. Hence A20, using Cr035_16.Pg356_18.Thm.
+    From Thm.S and Cr040_07.Pg128_26 get A30.
+    Now suppose S40. Next suppose S50.
+    Next Cs1.
+    Then F, using Cs2.
+    Therefore Thm.C.
+    "
+}
+
+deduc Pf1 of Pf.Cs1.F {
+    
+    asrt A10 {
+        en="
+        Since only the $@lam eth$ powers of $u, v, w$
+        appear in [the given equation](Pf.S40), one can
+        multiply these complex numbers by
+        arbitrary $@lam eth$ roots of unity.
+        "
+    }
+    
+    asrt A20 {
+        en="
+        $u$ can be replaced by $@alpuuh u$,
+        where $h$ is any integer.
+        "
+    }
+    
+    asrt A30 {
+        en="
+        An integer $h$ can always be found such that
+        $@alpuuh u$ has the form $@a + (1 - alp)^2 P$,
+        where $a$ is a rational integer, and $P$ is a
+        complex integer.
+        "
+        
+        note="
+        Kummer just says this is \"easy to show\" (_leicht to zeigen_).
+        "
+    }
+    
+    mthd M35 wolog {
+        en="
+        Replacing $u, v, w$ with suitable
+        mutiples by powers of $@alp$...
+        "
+    }
+    
+    exis E40 {
+        en="There are % such that"
+        intr I1 {
+            en="rational integers $a, b, c$"
+        }
+        intr I2 {
+            en="complex integers $P, Q, R$"
+        }
+        asrt A {
+            sy="
+            $@u = a + (1 - alp)^2 P$
+            $@v = b + (1 - alp)^2 Q$
+            $@w = c + (1 - alp)^2 R$
+            "
+        }
+    }
+    
+    asrt A50 {
+        en="
+        None of $a, b, c$ is
+        divisible by $@lam$.
+        "
+    }
+    
+    asrt A60 {
+        sy="
+        $@(3) quad qnt u + v; qnt u + alp v; qnt u + alp squ v; ccc
+          qnt u + alpuulam-1 v; = -wuulam$
+        "
+    }
+    
+    subdeduc D70 {
+        asrt C {
+            en="
+            The $@lam$ factors on the LHS of [(3)](A60)
+            have no common divisor, i.e. they
+            are relatively prime.
+            "
+        }
+        meson="C"
+    }
+    
+    asrt A75 {
+        en="
+        The product on the LHS of [(3)](A60) is
+        equal to a $@lam eth$ power.
+        "
+    }
+    
+    asrt A77 {
+        en="
+        Analogous to the ordinary integers, every complex
+        integer factors uniquely, up to units, as the product
+        of its ideal prime factors.
+        "
+    }
+    
+    asrt A80 {
+        en="
+        Each factor on the LHS of [(3)](A60) must be
+        equal to a $@lam eth$ power of a certain ideal
+        complex number, multiplied by some
+        complex unit.
+        "
+    }
+    
+    asrt A89 {
+        en="
+        As is well-known, every complex unit can be
+        decomposed into two factors, of which one is
+        a $@lam eth$ root of unity, and the other is unchanged
+        under the substitution of $@alp inv$ for $@alp$.
+        "
+    }
+    
+    exis E90 {
+        en="For $@r = 0, 1, 2, ddd, lam - 1$ we have % such that"
+        intr I10 {
+            en="a complex number $@tr$"
+        }
+        intr I20 {
+            en="a non-negative integer $@rho$"
+        }
+        intr I30 {
+            en="a complex unit $@Er(alp)$"
+        }
+        asrt A10 {
+            sy="$@(4) quad u + alpuur v = alpuurho Er(alp) truulam$"
+        }
+        asrt A20 {
+            en="$@tr$ is a factor of $w$"
+        }
+        asrt A30 {
+            sy="$@Er(alp) = Er(alp inv)$"
+        }
+    }
+    
+    asrt A100 {
+        en="$@truulam$ is an actual complex number"
+    }
+    
+    asrt A110 {
+        en="$@tr$ is an actual complex number"
+    }
+    
+    meson="
+    A10, so A20. But A30. So E40, by A20, applying M35.
+    Now A50 by Pf.Cs1.S.
+    From Pf.S40 get A60. Now D70.
+    Meanwhile A75 by A60.
+    From Cr035_16.Pg348_2.Thm get A77.
+    So A80, using D70 and A75.
+    Therefore E90, using A89.
+    From E90.A10 get A100, hence A110 using Pf.A20.
+    !
+    Pf.Cs1.F
+    "
+}
+
+deduc Pf1a of Pf1.D70.C {
+    
+    supp S10 {
+        en="
+        Suppose $@u + alpuur v$ and $@u + alpuus v$
+        had a common divisor.
+        "
+    }
+    
+    asrt A20 {
+        en="
+        $@(alpuur - alpuus)u$ and $@(alpuur - alpuus)v$ would
+        have the same common divisor.
+        "
+    }
+    
+    asrt A30 {
+        en="
+        $@(alpuur - alpuus)$ must be the common divisor.
+        "
+    }
+    
+    asrt A40 {
+        en="
+        $@(alpuur - alpuus)$ is equal to
+        $@1 - alp$ times a complex unit.
+        "
+    }
+    
+    asrt A50 {
+        en="
+        $@1 - alp$ divides a factor
+        on the LHS of [(3)](Pf1.A60).
+        "
+    }
+    
+    asrt A60 {
+        en="
+        $@1 - alp$ divides $@wuulam$.
+        "
+    }
+    
+    asrt A70 {
+        en="
+        $@1 - alp$ divides $w$.
+        "
+    }
+    
+    flse F80 contra S10 {}
+    
+    meson="
+    Suppose S10. Then A20, so A30 by Pf.S50.
+    But A40, so A50, by A30.
+    Then A60, hence A70, so F80 by Pf.Cs1.S.
+    So Pf1.D70.C.
+    "
+}
+
+
+
+
+
+
+
+
+

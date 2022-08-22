@@ -1,0 +1,34 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+
+
+from ..rdefs import *
+
+deduc Rem with d_k, d_m, d_alp {
+    
+    intr I0 {
+        en = "
+        Let $@d(alp)$ be the discriminant of a number,
+        and let $@delta$ be its different.
+        "
+    }
+
+    asrt C1 {
+        en = "$@d(alp)$ is a rational number"
+    }
+
+    asrt C2 {
+        sy = "$@d(alp) = (-1) sup frac m (m - 1) over 2;; n(delta)$"
+    }
+
+    meson = "
+    Let I0. Then C1 and C2.
+    "
+}

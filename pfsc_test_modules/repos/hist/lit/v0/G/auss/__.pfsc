@@ -1,0 +1,27 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+
+
+author = {
+    "birth": {
+        "day": 30, 
+        "month": 4, 
+        "year": 1777
+    }, 
+    "death": {
+        "day": 23, 
+        "month": 2, 
+        "year": 1855
+    }, 
+    "givenNames": "Carl Friedrich", 
+    "libpath": "lit.G.auss",
+    "portrait": "Gauss_6.jpg", 
+    "surname": "Gauss"
+}

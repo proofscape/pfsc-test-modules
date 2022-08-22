@@ -1,0 +1,144 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+
+
+from ..Art339 import d_n, d_X, d_Omega
+
+deduc Art340 with d_n, d_X, d_Omega {
+    
+    intr I10 {
+        en="
+        Let $r$ be any root in $@Omega$.
+        "
+    }
+    
+    asrt A20 {
+        en="
+        Every root of the equation $x^n - 1$
+        can be expressed as a power of $r$.
+        "
+    }
+    
+    asrt A30 {
+        en="
+        Any product of roots of $x^n - 1$ can
+        be written as $@r^lam$, with $@0 leq lam < n$.
+        "
+    }
+    
+    intr I40 {
+        en="
+        Let $@phi(t, u, v, ddd) in bbQ[t, u, v, ddd]$
+        "
+    }
+    
+    
+    subdeduc D45 {
+        
+        intr I10 {
+            en="
+            Let $@a, b, c, ddd$ be any roots of $x^n - 1$.
+            "
+        }
+        
+        asrt A20 {
+            en="
+            The generic term of $@phi$ looks like
+            $@h t sup alp; u sup beta; v sup gam; ccc$ for some $@h in bbQ$.
+            "
+        }
+        
+        asrt A30 {
+            en="
+            In $@phi(a, b, c, ddd)$, the generic term
+            reduces to a rational times a power of $r$.
+            "
+        }
+     
+        meson="
+        Let I10. Now A20 by Art340.I40. So A30, using Art340.A30.
+        "
+        
+    }
+    
+    asrt A50 {
+        en="
+        For any roots $@a, b, c, ddd$ of the equation $x^n - 1$,
+        we can write $@phi(a, b, c, ddd)$ in the form
+        $$@A + A' r + A'' r squ + A''' r^3 + ccc + A sup new; r sup n - 1;$$
+        where the coeffs $@A, A', ddd$ are known functions of those of $@phi$.
+        "
+    }
+    
+    asrt A60 {
+        en="
+        If in fact $@phi(t, u, v, ddd) in bbZ[t, u, v, ddd]$ then
+        all the $@A, A', ddd$ will be integers as well.
+        "
+    }
+    
+    asrt A70 {
+        en="
+        In $@phi(a squ, b squ, c squ, ddd)$, the terms that reduced
+        to $@r sup sig$ [before](D45.A30) will now reduce to $@r sup 2 sig;$ instead.
+        "
+    }
+    
+    asrt A80 {
+        sy="
+        $$@ phi(a^2, b^2, c^2, ddd) =
+        A + A' r^2 + A'' r^4 + A''' r^6 + ccc + A sup new; r sup 2n - 2;$$
+        "
+    }
+    
+    univ U90 {
+        en="For any % have"
+        intr I1 {
+            sy="$@lam in bbZ$"
+        }
+        asrt A1 {
+            sy="
+            $$@ phi(a^lam, b^lam, c^lam, ddd) =
+            A + A' r^lam + A'' r^{2 lam} + A''' r^{3 lam} + ccc + A sup new; r sup (n - 1) lam;$$
+            "
+        }
+    }
+    
+    asrt A100 {
+        en="
+        In particular,
+        $$@phi(1, 1, 1, ddd) = phi(a^n, b^n, c^n, ddd) = A + A' + A'' + ccc + A sup new;$$
+        "
+    }
+    
+    asrt A110 {
+        en="
+        $$@phi(a, b, c, ddd) + phi(a^2, b^2, c^2, ddd) + ccc + phi(a^n, b^n, c^n, ddd) = n A$$
+        "
+    }
+    
+    asrt A120 {
+        en="
+        [This sum](A110) is an integer divisible by $n$ in the case where $@phi in bbZ[t, u, v, ddd]$.
+        "
+    }
+    
+    
+    meson = "
+    Let I10. A20, so A30.
+    Let I40. Then A50, using D45.
+    Next A60.
+    Next A70, so A80.
+    Next U90.
+    From U90 get A100.
+    From U90 get A110, hence A120.
+    "
+    
+}

@@ -1,0 +1,19 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+deduc Thm {
+    asrt C {
+        en="
+        Two complex numbers that have exactly the same
+        (ideal) prime factors can differ only by a factor
+        of a complex unit.
+        "
+    }
+    meson="C"
+}

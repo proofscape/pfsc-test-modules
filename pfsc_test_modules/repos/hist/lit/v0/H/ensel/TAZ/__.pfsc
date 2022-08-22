@@ -1,0 +1,22 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+
+
+work = {
+    "MSC2010": "11Sxx",
+    "kind": "book",
+    "libpath": "lit.H.ensel.TAZ",
+    "publisher": "Teubner",
+    "source": [
+        "http://ebooks.library.cornell.edu/cgi/t/text/text-idx?c=math;cc=math;view=toc;subview=short;idno=00850002"
+    ],
+    "title": "Theorie der algebraischen Zahlen",
+    "year": 1908
+}

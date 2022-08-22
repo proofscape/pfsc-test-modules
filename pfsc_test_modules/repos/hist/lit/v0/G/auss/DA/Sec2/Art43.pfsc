@@ -1,0 +1,40 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+
+
+deduc Thm {
+    
+    intr I {
+        en="
+        Let $p$ be a prime number,
+        $m$ be a positive integer,
+        and $@A, B, C, ddd, M, N$ integers
+        such that $p$ does not divide $A$.
+        "
+    }
+    
+    asrt C {
+        en="
+        The congruence
+             $@A x^m + B xuum-1 + C xuum-2 + ccc + M x + N equiv 0 mod p$
+        cannot have more than $m$ incongruent roots mod $p$.
+        "
+    }
+    
+    meson="Let I. Then C."
+}
+
+deduc Pf of Thm.C {
+    
+    meson="
+    !
+    Thm.C
+    "
+}

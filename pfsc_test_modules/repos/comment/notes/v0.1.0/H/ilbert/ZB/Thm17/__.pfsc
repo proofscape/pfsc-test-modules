@@ -1,0 +1,126 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Expansions and Examples Library                        #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+anno Notes @@@
+
+<param:eg1_k>[]{
+    ptype: "NumberField",
+    name: "k",
+    default: "cyc(7)",
+    args: {
+        gen: "zeta",
+    },
+}
+
+<param:eg1_F>[]{
+    ptype: "NumberField",
+    name: "F",
+    default: "x^2 + 163",
+}
+
+<disp:eg1_disp1>[]{
+    import: {
+        k: eg1_k,
+    },
+    build: '''
+B = k.integral_basis(fmt='alg')
+html = "An integral basis for $k$:\n\n"
+html += r"$\{" + ','.join([latex(b, order='old') for b in B]) + r"\}$"
+return html
+''',
+    export: ["B"],
+}
+
+<param:eg1_p>[]{
+    ptype: "Prime",
+    context: "AlgNT",
+    name: "p",
+    default: 11,
+    args: {
+        chooser_upper_bound: 173
+    }
+}
+
+<param:eg1_frp>[]{
+    ptype: "PrimeIdeal",
+    name: "frp",
+    tex: "\mathfrak{p}",
+    import: {
+        k: eg1_k,
+        p: eg1_p,
+    },
+}
+
+<disp:eg1_disp2>[]{
+    import: {
+        frp: eg1_frp,
+        B: eg1_disp1,
+    },
+    build: '''
+html = "Reducing the elements of the integral basis mod $\\mathfrak{p}$:\n\n"
+html += "$$\\begin{array}{rcl}\n"
+html += "\n".join([
+    rf"{latex(b)} & \mapsto & {latex(frp.reduce_alg_num(b), order='old')} \\" for b in B
+])
+html += "\n\\end{array}$$\n"
+return html
+''',
+}
+
+<param:eg1_n>[]{
+    ptype: "Integer",
+    name: "n",
+    default: 12,
+    import: {
+      p: eg1_p,
+    },
+    args: {
+      gt: "p",
+      lt: 70,
+    },
+}
+
+<param:eg1_m>[]{
+    ptype: "Integer",
+    name: "m",
+    default: 1009,
+    import: {
+        gt: eg1_p,
+    },
+}
+
+<disp:eg1_disp3>[]{
+    import: {
+        n: eg1_n,
+        m: eg1_m,
+    },
+    build: "
+return '%s<br>%s' % (n, m)
+"
+}
+
+<disp:eg1_disp4>[]{
+    import: {
+        n: eg1_n,
+        m: eg1_m,
+        p: eg1_p,
+    },
+    build: "
+return '%s<br>%s<br>%s' % (n, m, p)
+"
+}
+
+<param:eg1_r>[]{
+    ptype: "PrimRes",
+    name: "r",
+    import: {
+        m: eg1_m,
+    },
+}
+@@@

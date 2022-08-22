@@ -1,0 +1,99 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+work = {
+    "journal": "Crelle",
+    "kind": "article",
+    "libpath": "lit.K.ummer.Cr040_07",
+    "pages": {
+        "first": 117,
+        "last": 129
+    },
+    "source": [
+        "http://www.digizeitschriften.de/dms/img/?PID=GDZPPN00214672X"
+    ],
+    "title": "Zwei besondere Untersuchungen über die Classen-Anzahl...",
+    "volume": 40,
+    "year": 1850,
+    "signed_date": [18, 6, 1849]
+}
+
+defn d_lam "$@lam$" "a prime number"
+defn d_alp "$@alp$" "an imaginary root of the equation $@alpuulam = 1$"
+
+deduc Pg127_25 with d_lam {
+    
+    asrt C {
+        en="
+        The second factor $@frac D over Del;$ of the class number $H$
+        can be divisible by $@lam$ only if the first factor
+        $@frac P over qnt 2 lam; sup mew - 1;;$ also is divisible by $@lam$.
+        "
+    }
+    
+    meson="C"
+}
+
+deduc Pg127_30 with d_lam, d_alp {
+    
+    asrt C {
+        en="
+        The class number of $@bbQ(alp)$ is divisible
+        by $@lam$ if and only if $@lam$ divides the numerator
+        of one or more of the first $@(lam - 3)/2$
+        Bernoulli numbers.
+        "
+    }
+    
+    meson="C"
+}
+
+deduc Pg128_26 with d_lam, d_alp {
+    
+    intr I {
+        en="
+        Let $@E(alp) in bbZ[alp]$ be a unit.
+        "
+    }
+    
+    supp S1 {
+        en="
+        Suppose $@lam$ does not divide the numerator
+        of any of the first $@(lam - 3)/2$ Bernoulli
+        numbers.
+        "
+    }
+    
+    supp S2 {
+        en="
+        Suppose $@E(alp)$ is congruent to a
+        rational integer mod $@lam$.
+        "
+    }
+    
+    asrt C {
+        en="
+        $@E(alp)$ is the $@lam eth$ power of
+        another unit in $@bbZ[alp]$.
+        "
+    }
+    
+    meson="Let I, suppose S1, suppose S2. Then C."
+}
+
+
+
+
+
+
+
+
+
+
+

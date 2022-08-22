@@ -1,0 +1,48 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+
+
+defn d_n "$n$" "an odd prime number"
+defn d_X "$X$" "the equation $@x^{n-1} + x^{n-2} + ccc + x + 1 = 0$"
+defn d_Omega "$@Omega$" "the set of all roots of $X$"
+
+deduc Art339 with d_n {
+    
+    intr I10 {
+        en="
+        Denote the equation
+            $@x^{n-1} + x^{n-2} + ccc + x + 1 = 0$
+        by $X$.
+        "
+    }
+    
+    asrt A20 {
+        en="
+        Among the roots of the equation $x^n - 1$
+        only $x = 1$ is real. The other $n - 1$ roots
+        are given by equation $X$, and are all imaginary.
+        "
+    }
+    
+    intr I30 {
+        en="
+        Let $@Omega$ be the set of all roots of $X$.
+        "
+    }
+    
+    
+    meson="
+    Let I10.
+    Next A20.
+    Next let I30.
+    !
+    "
+    
+}

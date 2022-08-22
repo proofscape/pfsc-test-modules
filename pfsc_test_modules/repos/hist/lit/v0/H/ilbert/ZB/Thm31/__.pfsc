@@ -1,0 +1,28 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+
+
+from ..rdefs import *
+
+deduc Thm with d_k {
+    
+    asrt A {
+        en = "
+        The discriminant $d$ of the number field $k$
+        contains all and only those rational primes
+        as factors which are divisible by the square
+        of a prime ideal.
+        "
+    }
+
+    meson = "
+    A.
+    "
+}

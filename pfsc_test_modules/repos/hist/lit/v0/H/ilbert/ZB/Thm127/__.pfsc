@@ -1,0 +1,41 @@
+# --------------------------------------------------------------------------- #
+# The Toeplitz Project Literature Library                                     #
+# Copyright (c) 2011-2022 Toeplitz Project contributors                       #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+
+
+deduc Thm {
+
+    intr I {
+        en = "
+        Let $@ell$ be an odd prime,
+        and $@zeta = rme sup 2 i pie / ell$.
+        "
+    }
+
+    asrt A {
+        en = "
+        Any system of fundamental units of
+        the real subfield $@bbQ(zeta + zeta inv)$ of
+        $@bbQ(zeta)$ is also a system of fundamental
+        units for for field $@bbQ(zeta)$ itself.
+        "
+    }
+
+    meson = "
+    Let I. Then A.
+    "
+}
+
+deduc Pf of Thm.A {
+
+    meson = "
+    !
+    Thm.A
+    "
+}
