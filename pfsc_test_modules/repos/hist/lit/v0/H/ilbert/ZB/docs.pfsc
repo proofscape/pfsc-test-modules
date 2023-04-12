@@ -1,0 +1,42 @@
+# Doc infos
+
+ZB_Ch2 = {
+    title: "Die Theorie der algebraischen Zahlkörper",
+    nickname: "der Zahlbericht",
+    author: "David Hilbert",
+    year: 1897,
+    chapter: "2",
+    url: "https://www.digizeitschriften.de/download/pdf/37721857X_0004/log71.pdf",
+    docId: "pdffp:f55073bb58f8823ebfa19482ab6fdabe",
+}
+
+ZB_Ch21 = {
+    title: "Die Theorie der algebraischen Zahlkörper",
+    nickname: "der Zahlbericht",
+    author: "David Hilbert",
+    year: 1897,
+    chapter: "21",
+    url: "https://www.digizeitschriften.de/download/pdf/37721857X_0004/log92.pdf",
+    docId: "pdffp:73a76954e6a0db76a97e98bdac835811",
+}
+
+ZB_Ch25 = {
+    title: "Die Theorie der algebraischen Zahlkörper",
+    nickname: "der Zahlbericht",
+    author: "David Hilbert",
+    year: 1897,
+    chapter: "25",
+    url: "https://www.digizeitschriften.de/download/pdf/37721857X_0004/log96.pdf",
+    docId: "pdffp:6182118bae4b1053738203878d18e62b",
+}
+
+ZB_Ch31 = {
+    title: "Die Theorie der algebraischen Zahlkörper",
+    nickname: "der Zahlbericht",
+    author: "David Hilbert",
+    year: 1897,
+    chapter: "31",
+    url: "https://www.digizeitschriften.de/download/pdf/37721857X_0004/log103.pdf",
+    docId: "pdffp:7210acd6919653b35a5dc957234958ce",
+}
+

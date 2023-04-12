@@ -6,7 +6,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this         #
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
 # --------------------------------------------------------------------------- #
-
+import ..docs as docs
 
 
 from ..Thm33 import Thm as Thm33
@@ -45,12 +45,16 @@ deduc Thm {
 
 deduc Pf of Thm.C1, Thm.C2, Thm.C3, Thm.C4 {
 
+    docInfo = docs.ZB_Ch21
+
     intr I0 {
         en = "
         Let
         $@F(x) = frac xuuell - 1 over x - 1;$
         $@= xuuell-1 + xuuell-2 + ccc + 1.$
         "
+
+        doc="v2;s1.7;(2:1349:1908:447:1445:158:55);n;x+10;(2:1349:1908:608:1458:276:30)"
     }
 
     asrt A1 {

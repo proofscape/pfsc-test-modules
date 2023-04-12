@@ -12,6 +12,7 @@
 from ..Pg180L1 import Rem as RemarkOnP180
 from ..Thm5 import Pf as Thm5Pf
 from ..rdefs import *
+import ..docs as docs
 
 deduc Thm with d_ell {
     
@@ -43,6 +44,8 @@ deduc Thm with d_ell {
 }
 
 deduc Pf1 of Thm.C1 with d_Fzeta, d_lam {
+
+    docInfo = docs.ZB_Ch21
     
     asrt A1 {
         en = "
@@ -51,6 +54,8 @@ deduc Pf1 of Thm.C1 with d_Fzeta, d_lam {
         ccc qnt zeta - zetauuell-1; =
         bqnt frac d F(x) over d x;; sub x = zeta;$
         "
+
+        doc = "v2;s1.9;(4:1507:2133:492:837:538:74)"
     }
 
     asrt A2 {

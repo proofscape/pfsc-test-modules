@@ -10,6 +10,7 @@
 
 
 from ..Thm8 import Thm as Thm8
+import ..docs as docs
 
 deduc Thm {
 
@@ -35,6 +36,8 @@ deduc Thm {
 
 deduc Pf of Thm.C {
 
+    docInfo = docs.ZB_Ch2
+
     exis E1 {
 
         en = "$@exists$ % such that"
@@ -49,15 +52,23 @@ deduc Pf of Thm.C {
 
         asrt A1 {
             sy = "$@frc frm = (alp)$"
+
+            doc="v2;s1.8;(6:1428:2021:848:902:214:29);n;(6:1428:2021:359:932:44:25)"
         }
+
+        doc="v2;s1.8;(6:1428:2021:487:902:309:28)"
     }
 
     asrt A2 {
         sy = "$@fra frc frm = frb frc frm$"
+
+        doc="v2;s1.8;(6:1428:2021:728:932:127:29)"
     }
 
     asrt A3 {
         sy = "$@alp fra = alp frb$"
+
+        doc="v2;s1.8;(6:1428:2021:913:933:99:28)"
     }
 
     meson = "

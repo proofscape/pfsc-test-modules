@@ -7,6 +7,11 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
 # --------------------------------------------------------------------------- #
 
+import ...docs as docs
+
 anno Walkthrough @@@
-Insightful commentary...
+Insightful commentary on <pdf:>[FLT for regular primes]{
+    doc: docs.ZB_Ch36,
+    sel: "v2;s1.6;(2:1269:1796:325:1103:625:128)",
+}...
 @@@
