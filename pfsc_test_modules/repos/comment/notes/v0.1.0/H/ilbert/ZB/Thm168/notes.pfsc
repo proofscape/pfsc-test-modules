@@ -10,7 +10,7 @@
 import ...docs as docs
 
 anno Walkthrough @@@
-Insightful commentary on <pdf:>[FLT for regular primes]{
+Insightful commentary on <doc:>[FLT for regular primes]{
     doc: docs.ZB_Ch36,
     sel: "v2;s1.6;(2:1269:1796:325:1103:625:128)",
 }...
