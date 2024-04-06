@@ -11,7 +11,7 @@ anno Notes @@@
 
 <param:eg1_k>[]{
     ptype: "NumberField",
-    name: "k",
+    tex: "k",
     init: "cyc(7)",
     args: {
         gen: "zeta",
@@ -20,7 +20,7 @@ anno Notes @@@
 
 <param:eg1_F>[]{
     ptype: "NumberField",
-    name: "F",
+    tex: "F",
     init: "x^2 + 163",
 }
 
@@ -44,16 +44,15 @@ return html
 <param:eg1_p>[]{
     ptype: "Prime",
     context: "AlgNT",
-    name: "p",
+    tex: "p",
     init: 11,
     args: {
-        chooser_upper_bound: 173
+        chooserUpperBound: 173
     }
 }
 
 <param:eg1_frp>[]{
     ptype: "PrimeIdeal",
-    name: "frp",
     tex: "\mathfrak{p}",
     import: {
         k: eg1_k,
@@ -79,7 +78,7 @@ return html
 
 <param:eg1_n>[]{
     ptype: "Integer",
-    name: "n",
+    tex: "n",
     init: 12,
     import: {
       p: eg1_p,
@@ -92,7 +91,7 @@ return html
 
 <param:eg1_m>[]{
     ptype: "Integer",
-    name: "m",
+    tex: "m",
     init: 1009,
     import: {
         gt: eg1_p,
@@ -132,7 +131,7 @@ return str(y)
 
 <param:eg1_r>[]{
     ptype: "PrimRes",
-    name: "r",
+    tex: "r",
     import: {
         m: eg1_m,
     },
