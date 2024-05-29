@@ -9,7 +9,7 @@ data_files = [str(q.relative_to(p)) for q in p.glob('repos/**/*.pfsc')]
 
 setuptools.setup(
     name="pfsc_test_modules",
-    version="0.30.0a1",
+    version="0.30.0a2",
     description="Test modules for pfsc-server",
     long_description=long_description,
     long_description_content_type="text/markdown",
