@@ -12,7 +12,7 @@ anno Notes @@@
 <param:eg1_k>[]{
     ptype: "NumberField",
     name: "k",
-    default: "cyc(7)",
+    init: "cyc(7)",
     args: {
         gen: "zeta",
     },
@@ -21,7 +21,7 @@ anno Notes @@@
 <param:eg1_F>[]{
     ptype: "NumberField",
     name: "F",
-    default: "x^2 + 163",
+    init: "x^2 + 163",
 }
 
 <disp:eg1_disp1>[]{
@@ -45,7 +45,7 @@ return html
     ptype: "Prime",
     context: "AlgNT",
     name: "p",
-    default: 11,
+    init: 11,
     args: {
         chooser_upper_bound: 173
     }
@@ -80,7 +80,7 @@ return html
 <param:eg1_n>[]{
     ptype: "Integer",
     name: "n",
-    default: 12,
+    init: 12,
     import: {
       p: eg1_p,
     },
@@ -93,7 +93,7 @@ return html
 <param:eg1_m>[]{
     ptype: "Integer",
     name: "m",
-    default: 1009,
+    init: 1009,
     import: {
         gt: eg1_p,
     },
